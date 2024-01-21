@@ -35,3 +35,8 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# Get ssh agent from ubuntu keychain
+if [ -d "$HOME/.keychain" ]; then 
+	source $HOME/.keychain/$(hostname)-sh
+fi
