@@ -1,0 +1,6 @@
+[submodule "/home/paynejj/.config/nvim"]
+	path = /home/paynejj/.config/nvim
+	url = https://github.com/AstroNvim/AstroNvim
+[submodule ".config/astronvim/lua/user"]
+	path = .config/astronvim/lua/user
+	url = git@github.com:paynejj/astronvim_config.git

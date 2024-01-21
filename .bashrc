@@ -118,3 +118,4 @@ fi
 
 # Get SSH keys from keychain (sudo apt install keychain)
 source .keychain/DESKTOP-E2MB9V1-sh
+. "$HOME/.cargo/env"
