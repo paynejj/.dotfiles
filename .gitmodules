@@ -4,3 +4,6 @@
 [submodule ".config/astronvim/lua/user"]
 	path = .config/astronvim/lua/user
 	url = https://github.com/paynejj/astronvim_config.git
+[submodule "/home/paynejj/.config/zsh/.antidote"]
+	path = /home/paynejj/.config/zsh/.antidote
+	url = https://github.com/mattmc3/antidote.git
