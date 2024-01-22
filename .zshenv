@@ -1,5 +1,11 @@
-# ----- Path Variable -----
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# ----- Package Managers -----
+# Rust
+  [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+# Homebrew 
+brew=/opt/homebrew/bin/brew
+[ -f $brew ] && eval "$($brew shellenv)"
+
 # ----- XDG Standard ------
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -21,8 +27,3 @@ export HISTFILE="$ZDOTDIR/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-# ----- Auto Loaders -----
-# Rust
-if [ -d "$HOME/.cargo" ]; then 
-  source "$HOME/.cargo/env"
-fi 
