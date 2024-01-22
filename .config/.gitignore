@@ -1,3 +1,4 @@
 # ZSH Junk
 .zcompdump
 .zsh_history
+.config/fzf/fzf.*
