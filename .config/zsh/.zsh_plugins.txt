@@ -6,5 +6,5 @@ zsh-users/zsh-history-substring-search kind:defer
 peterhurford/up.zsh
 
 # Aliases 
-DarrinTisdale/zsh-aliases-exa
+$ZDOTDIR/.aliases
 ohmyzsh/ohmyzsh path:plugins/git
