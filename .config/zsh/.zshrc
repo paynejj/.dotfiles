@@ -16,6 +16,11 @@ antidote load $ZDOTDIR/.zsh_plugins.txt
 # Fzf integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Direnv integration
+if command -v direnv > /dev/null; then
+	eval "$(direnv hook zsh)"
+fi
+
 # Enable prompt (Should be last)
 if command -v starship > /dev/null; then
 	eval "$(starship init zsh)"
