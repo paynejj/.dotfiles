@@ -29,7 +29,7 @@
 [merge]
   ff = only
   autoStash = true
-  conflictStyle = zdiff3
+  conflictStyle = diff3
 
 [rebase]
   autoSquash = true
