@@ -1,7 +1,7 @@
 [submodule "astronvim"]
 	path = .config/nvim
 	url = https://github.com/AstroNvim/AstroNvim
-[submodule "nvim_config"]
+[submodule "astronvim_config"]
 	path = .config/astronvim/lua/user
 	url = https://github.com/paynejj/astronvim_config.git
 [submodule "antidote"]
@@ -10,3 +10,6 @@
 [submodule "fzf"]
 	path = .config/programs/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "neovim"]
+	path = .config/programs/neovim
+	url = https://github.com/neovim/neovim.git
