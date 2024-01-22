@@ -1,4 +1,36 @@
 # This is Git's per-user configuration file.
 [user]
-email = joshua.payne.j@gmail.com
-name = Joshua Payne
+  email = joshua.payne.j@gmail.com
+  name = Joshua Payne
+
+[format]
+  pretty = oneline
+
+[log]
+  abbrevCommit = true
+
+[status]
+  relativePaths = false
+  short = true
+  branch = true
+
+[commit]
+  verbose = true
+
+[push]
+  autoSetupRemote = true
+
+[pull]
+  ff = only
+
+[fetch]
+  prune = true
+
+[merge]
+  ff = only
+  autoStash = true
+  conflictStyle = zdiff3
+
+[rebase]
+  autoSquash = true
+  autoStash = true

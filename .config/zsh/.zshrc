@@ -1,10 +1,6 @@
 # Set zsh options
 setopt histignorealldups sharehistory
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
 # Get ssh agent from ubuntu keychain
 if [ -d "$HOME/.keychain" ]; then 
 	source $HOME/.keychain/$(hostname)-sh
