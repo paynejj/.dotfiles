@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 # Set zsh options
 setopt histignorealldups sharehistory
 
@@ -13,7 +16,7 @@ source $ZDOTDIR/.antidote/antidote.zsh
 antidote load $ZDOTDIR/.zsh_plugins.txt
 
 # Fzf integration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $XDG_CONFIG_HOME/fzf/fzf.zsh ] && source $XDG_CONFIG_HOME/fzf/fzf.zsh
 
 # Direnv integration
 command -v direnv > /dev/null && eval "$(direnv hook zsh)"

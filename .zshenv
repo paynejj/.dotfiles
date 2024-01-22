@@ -1,3 +1,5 @@
+# ----- Path Variable -----
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # ----- XDG Standard ------
 export XDG_CONFIG_HOME=$HOME/.config
 
