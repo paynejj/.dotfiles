@@ -5,9 +5,8 @@ setopt histignorealldups sharehistory
 bindkey -e
 
 # Get ssh agent from ubuntu keychain
-if [ -d "$HOME/.keychain" ]; then 
-	source $HOME/.keychain/$(hostname)-sh
-fi
+keychain=$HOME/.keychain/$(hostname)-sh
+[ -f $keychain ] && source $keychain
 
 # Load antidote plugins
 source $ZDOTDIR/.antidote/antidote.zsh
@@ -17,11 +16,10 @@ antidote load $ZDOTDIR/.zsh_plugins.txt
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Direnv integration
-if command -v direnv > /dev/null; then
-	eval "$(direnv hook zsh)"
-fi
+command -v direnv > /dev/null && eval "$(direnv hook zsh)"
+
+# Fast Node Manager (FNM) integration
+command -v fnm > /dev/null && eval "$(fnm env --use-on-cd)"
 
 # Enable prompt (Should be last)
-if command -v starship > /dev/null; then
-	eval "$(starship init zsh)"
-fi
+command -v starship > /dev/null && eval "$(starship init zsh)"
