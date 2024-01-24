@@ -3,6 +3,7 @@
 # Get the path to bootstrap.d
 script_dir="$(dirname "$(readlink -f "$0")")"
 source "$script_dir/../utils.sh"
+source "$HOME/.zshenv"
 
 check_prerequisites "curl" "cmake"
 
