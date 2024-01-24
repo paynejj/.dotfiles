@@ -7,6 +7,13 @@ setopt histignorealldups sharehistory
 # Set control scheme to emacs 
 bindkey -e
 
+{% if yadm.os == "Linux" %}
+
+# Get ssh agent from ubuntu keychain
+keychain=$HOME/.keychain/$(hostname)-sh
+[ -f $keychain ] && source $keychain
+
+{% endif %}
 
 # Load antidote plugins
 source $ZDOTDIR/.antidote/antidote.zsh

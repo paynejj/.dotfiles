@@ -2,6 +2,12 @@
 # Rust
   [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
+{% if yadm.os == "Darwin" %}
+
+# Homebrew 
+command -v brew && eval "$($brew shellenv)"
+
+{% endif %}
 
 # ----- XDG Standard ------
 export XDG_CONFIG_HOME=$HOME/.config
