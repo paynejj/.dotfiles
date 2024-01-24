@@ -4,7 +4,7 @@
 script_dir="$(dirname "$(readlink -f "$0")")"
 source "$script_dir/../utils.sh"
 
-check_prerequisites "curl cmake"
+check_prerequisites "curl" "cmake"
 
 # Initialize Submodules
 cd "$HOME" || exit 1
@@ -37,6 +37,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install Rust crates
 echo "Intalling crates..."
 echo "cargo install bat bottom eza fd-find fnm ripgrep starship"
+cargo install bat bottom eza fd-find fnm ripgrep starship
 
 if [ "$(uname -s)" == "Darwin" ]; then
 	# Install Homebrew
