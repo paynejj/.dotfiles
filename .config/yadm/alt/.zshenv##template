@@ -3,10 +3,8 @@
   [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 {% if yadm.os == "Darwin" %}
-
 # Homebrew 
-command -v brew && eval "$($brew shellenv)"
-
+[ -x /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 {% endif %}
 
 # ----- XDG Standard ------
