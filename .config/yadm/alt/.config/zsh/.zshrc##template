@@ -8,11 +8,14 @@ setopt histignorealldups sharehistory
 bindkey -e
 
 {% if yadm.os == "Linux" %}
-
 # Get ssh agent from ubuntu keychain
 keychain=$HOME/.keychain/$(hostname)-sh
 [ -f $keychain ] && source $keychain
-
+{% endif %}
+{% if yadm.os == "WSL" %}
+# Get ssh agent from ubuntu keychain
+keychain=$HOME/.keychain/$(hostname)-sh
+[ -f $keychain ] && source $keychain
 {% endif %}
 
 # Load antidote plugins
