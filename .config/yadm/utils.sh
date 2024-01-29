@@ -21,3 +21,23 @@ check_prerequisites() {
 	fi
 	echo "All Prerequisites Detected!"
 }
+
+user_confirmation() {
+	question=$1
+	while true; do
+		read -rp "$question (y/n)" user_input
+		if [ "$user_input" == "y" ]; then
+			return 0
+		elif [ "$user_input" == "n" ]; then
+			return 1
+		else
+			echo "Please input 'y' or 'n'. Press Ctrl+C to force exit"
+		fi
+		sleep 0.5
+	done
+}
+
+error_handler() {
+	echo "Bootstrap encountered an error! Exiting..."
+	exit 1
+}
