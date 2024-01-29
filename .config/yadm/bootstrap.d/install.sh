@@ -28,10 +28,12 @@ echo "XDG_CONFIG_HOME=$XDG_CONFIG_HOME"
 echo "BOOTSTRAP_DIR=$BOOTSTRAP_DIR"
 
 if [ "$OS" == "Linux" ] && [ "$DISTRO" == "Unknown" ]; then
-	user_confirmation "This install script is intended for MacOS and Ubuntu. Continue?" || exit
+	user_confirmation "This install script is intended for MacOS and Ubuntu. Continue?"
 fi
 
 # Install Package Manager and/or programs
+user_confirmation "I need to use sudo to install some packages, is that ok?"
+sudo echo "Sudo Access Granted!"
 if [ "$OS" == "Darwin" ]; then
 	# Ensure curl is installed
 	check_prerequisites "curl"
@@ -44,11 +46,10 @@ if [ "$OS" == "Darwin" ]; then
 	# Install brewfile
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 	echo "Installing brewfile"
-	echo "brew bundle install"
-	brew bundle install
+	echo "brew bundle install --global"
+	brew bundle install --global
 else
 	# Install via apt
-	user_confirmation "I need to use sudo to install some packages, is that ok?" || exit
 	echo "sudo apt update && sudo apt install zsh build-essential cmake ninja-build gettext unzip curl -y"
 	sudo apt update && sudo apt install zsh build-essential cmake ninja-build gettext unzip curl -y
 	# Install lazygit
