@@ -1,0 +1,5 @@
+# ZSH Junk
+.zcompdump
+.zsh_history
+.zprofile
+.zsh_plugins.zsh

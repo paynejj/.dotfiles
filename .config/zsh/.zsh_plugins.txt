@@ -1,0 +1,10 @@
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search kind:defer
+
+# use up (count) instead of '../../../'
+peterhurford/up.zsh
+
+# Aliases 
+$ZDOTDIR/.aliases
+ohmyzsh/ohmyzsh path:plugins/git

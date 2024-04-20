@@ -1,0 +1,36 @@
+# This is Git's per-user configuration file.
+; [user]
+; 	name = Firstname Lastname
+; 	email = person@example.com
+
+[format]
+  pretty = oneline
+
+[log]
+  abbrevCommit = true
+
+[status]
+  relativePaths = false
+  short = true
+  branch = true
+
+[commit]
+  verbose = true
+
+[push]
+  autoSetupRemote = true
+
+[pull]
+  ff = only
+
+[fetch]
+  prune = true
+
+[merge]
+  ff = only
+  autoStash = true
+  conflictStyle = diff3
+
+[rebase]
+  autoSquash = true
+  autoStash = true
