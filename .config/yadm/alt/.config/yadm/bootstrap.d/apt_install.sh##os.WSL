@@ -4,8 +4,9 @@
 # enable user input
 exec </dev/tty
 
+echo "Installing apt packages"
 # Install packages via apt
 sudo apt update \
-  && apt upgrade \
-  && apt install gettext cmake direnv fzf gh jq maven ninja zsh
+  && sudo apt upgrade \
+  && sudo apt install ninja-build gettext cmake unzip curl build-essential direnv fzf gh jq maven zsh -y
 

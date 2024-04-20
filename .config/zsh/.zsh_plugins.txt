@@ -2,8 +2,8 @@ zdharma-continuum/fast-syntax-highlighting kind:defer
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search kind:defer
 
-# use up (count) instead of '../../../'
-peterhurford/up.zsh
+peterhurford/up.zsh # ../ replacement
+zpm-zsh/clipboard # universal clipboard
 
 # Aliases 
 $ZDOTDIR/.aliases
