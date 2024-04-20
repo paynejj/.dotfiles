@@ -1,0 +1,11 @@
+#! /bin/bash
+# vim: set filetype=sh
+
+# enable user input
+exec </dev/tty
+
+# Install packages via apt
+sudo apt update \
+  && apt upgrade \
+  && apt install gettext cmake direnv fzf gh jq maven ninja zsh
+
