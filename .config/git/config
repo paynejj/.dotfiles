@@ -1,7 +1,6 @@
-# This is Git's per-user configuration file.
-; [user]
-; 	name = Firstname Lastname
-; 	email = person@example.com
+[user]
+	name = Joshua Payne
+	email = 70377045+paynejj@users.noreply.github.com
 
 [format]
   pretty = oneline
