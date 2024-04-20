@@ -1,0 +1,28 @@
+# ----- Package Managers -----
+# Rust
+  [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
+# Homebrew 
+[ -x /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
+
+# ----- XDG Standard ------
+export XDG_CONFIG_HOME=$HOME/.config
+
+# ----- Default Editor -----
+editor_priority_list=('nvim' 'vim' 'vi' 'nano')
+for item in ${editor_priority_list[@]}
+do
+  if command -v $item > /dev/null; then
+    my_editor=$item
+    break
+  fi
+done
+export EDITOR=$my_editor
+export VISUAL=$my_editor
+
+# ----- Zsh Configuration -----
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+export HISTFILE="$ZDOTDIR/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+

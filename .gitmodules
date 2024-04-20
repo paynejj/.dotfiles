@@ -1,9 +1,9 @@
 [submodule "nvim_config"]
 	path = .config/nvim
-	url = https://github.com/paynejj/nvim_config
-[submodule "antidote"]
-	path = .config/zsh/.antidote
-	url = https://github.com/mattmc3/antidote.git
+	url = https://github.com/paynejj/nvim_config.git
 [submodule "neovim"]
 	path = .config/programs/neovim
 	url = https://github.com/neovim/neovim.git
+[submodule "antidote"]
+	path = .config/zsh/.antidote
+	url = https://github.com/mattmc3/antidote.git
