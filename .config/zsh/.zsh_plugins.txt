@@ -1,10 +1,13 @@
-zdharma-continuum/fast-syntax-highlighting kind:defer
-zsh-users/zsh-autosuggestions kind:defer
-zsh-users/zsh-history-substring-search kind:defer
-
 peterhurford/up.zsh # ../ replacement
 zpm-zsh/clipboard # universal clipboard
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# Completions
+zsh-users/zsh-completions path:src kind:fpath
 
 # Aliases 
 $ZDOTDIR/.aliases
-ohmyzsh/ohmyzsh path:plugins/git
+
+# Keep at end
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search 

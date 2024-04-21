@@ -1,6 +1,4 @@
 # vim: set filetype=zsh
-autoload -Uz compinit
-compinit
 
 # Set zsh options
 setopt histignorealldups sharehistory
@@ -23,6 +21,15 @@ keychain=$HOME/.keychain/$(hostname)-sh
 source $ZDOTDIR/.antidote/antidote.zsh
 antidote load $ZDOTDIR/.zsh_plugins.txt
 
+# Load completions
+autoload -Uz compinit && compinit
+
+# zsh-history-substring-search configuration
+bindkey '^[[A' history-substring-search-up
+bindkey '^[OA' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[OB' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # Direnv integration
 command -v direnv > /dev/null && eval "$(direnv hook zsh)"
