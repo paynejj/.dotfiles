@@ -6,7 +6,6 @@ exec </dev/tty
 
 echo "Installing apt packages"
 # Install packages via apt
-sudo apt update \
-  && sudo apt upgrade \
-  && sudo apt install ninja-build gettext cmake unzip curl build-essential direnv fzf gh jq maven zsh -y
-
+sudo apt update &&
+	sudo apt upgrade &&
+	sudo apt install ninja-build gettext cmake unzip curl build-essential direnv fzf gh jq maven zsh -y

@@ -1,3 +1,4 @@
+# vim: set filetype=zsh
 # ----- Package Managers -----
 # Rust
   [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"

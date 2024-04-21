@@ -1,8 +1,11 @@
-
 # Install Rust
-echo "Installing Rust toolchain..."
-echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+if command -v rustup >/dev/null; then
+	echo "Rust toolchain already installed"
+else
+	echo "Installing Rust toolchain..."
+	echo "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+fi
 
 # Install Rust crates
 echo "Intalling crates..."

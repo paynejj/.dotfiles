@@ -5,14 +5,16 @@
 exec </dev/tty
 
 # Install Homebrew
-echo "Installing Homebrew"
-echo "NONINTERACTIVE=1 /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo "Installed Homebrew!"
+if command -v brew >/dev/null; then
+	echo "Homebrew already installed"
+else
+	echo "Installing Homebrew"
+	echo "NONINTERACTIVE=1 /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 # Install brewfile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Installing brewfile"
 echo "brew bundle install --global"
 brew bundle install --global
-
