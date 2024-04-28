@@ -31,6 +31,9 @@ bindkey '^[[B' history-substring-search-down
 bindkey '^[OB' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+# TheFuck integration
+command -v thefuck > /dev/null && eval "$(thefuck --alias fuck)"
+
 # Direnv integration
 command -v direnv > /dev/null && eval "$(direnv hook zsh)"
 
